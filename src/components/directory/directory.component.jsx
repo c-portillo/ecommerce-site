@@ -5,7 +5,7 @@ import "./directory.styles.scss"
 
 const sectionsList = [
     {
-        title: 'clothing',
+        title: 'all clothing',
         imageUrl: 'https://cdn.pixabay.com/photo/2021/11/15/05/25/boutique-6796399_1280.jpg',
         id: 1,
         linkUrl: 'shop/clothing'
