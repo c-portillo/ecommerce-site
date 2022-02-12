@@ -5,26 +5,26 @@ import "./directory.styles.scss"
 
 const sectionsList = [
     {
-        title: 'hats',
-        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+        title: 'clothing',
+        imageUrl: 'https://cdn.pixabay.com/photo/2021/11/15/05/25/boutique-6796399_1280.jpg',
         id: 1,
-        linkUrl: 'shop/hats'
+        linkUrl: 'shop/clothing'
     },
     {
-        title: 'jackets',
-        imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+        title: 'shoes',
+        imageUrl: 'https://cdn.pixabay.com/photo/2015/11/13/14/35/shoes-1042070_1280.jpg',
         id: 2,
-        linkUrl: 'shop/jackets'
+        linkUrl: 'shop/shoes'
     },
     {
-        title: 'sneakers',
-        imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+        title: 'hats & accessories',
+        imageUrl: 'https://cdn.pixabay.com/photo/2021/07/05/12/24/clothes-6389053_1280.jpg',
         id: 3,
-        linkUrl: 'shop/sneakers'
+        linkUrl: 'shop/accessories'
     },
     {
         title: 'womens',
-        imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+        imageUrl: 'https://cdn.pixabay.com/photo/2020/01/21/13/23/freedom-4782870_1280.jpg',
         size: 'large',
         id: 4,
         size: 'large',
@@ -32,7 +32,7 @@ const sectionsList = [
     },
     {
         title: 'mens',
-        imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+        imageUrl: 'https://cdn.pixabay.com/photo/2017/04/05/01/12/traveler-2203666_1280.jpg',
         size: 'large',
         id: 5,
         linkUrl: 'shop/mens'
@@ -52,8 +52,8 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({ title, imageUrl, id, size }) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+                    this.state.sections.map(({ id, ...otherSectionProps }) => (
+                        <MenuItem key={id} {...otherSectionProps} />
                     ))
                 }
             </div>
